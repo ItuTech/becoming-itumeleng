@@ -1,0 +1,165 @@
+# Becoming Itumeleng: Wardrobe Inventory
+# Inspired by Olivia Pope's signature style from Scandal
+# Power dressing meets modern elegance
+
+aesthetic:
+  description: "Clean lines, structured silhouettes, neutral tones with intentional pops of colour. Every outfit should say 'she means business' without trying too hard."
+  icons:
+    - "Olivia Pope (Scandal)"
+    - "Modern power femininity"
+  rules:
+    - "Quality over quantity. Always."
+    - "Fit is everything. Tailoring is non-negotiable."
+    - "Neutrals are the foundation. Colour is the accent."
+    - "When in doubt, overdress."
+    - "Accessories should elevate, not compete."
+
+colour_palette:
+  core_neutrals:
+    - white
+    - cream
+    - ivory
+    - camel
+    - grey
+    - charcoal
+    - black
+    - navy
+  accent_colours:
+    - burgundy
+    - emerald green
+    - soft lavender
+    - blush pink
+    - cobalt blue
+    - gold
+
+coats_and_outerwear:
+  - item: "White structured wool coat"
+    vibe: "The Olivia Pope signature. Instant power."
+    occasions: ["corporate events", "networking", "presentations"]
+  - item: "Camel trench coat"
+    vibe: "Classic, timeless, goes with everything"
+    occasions: ["everyday", "meetings", "events"]
+  - item: "Charcoal tailored blazer"
+    vibe: "Boardroom ready but not boring"
+    occasions: ["workshops", "corporate", "YouTube recordings"]
+  - item: "Black longline blazer"
+    vibe: "Effortlessly polished"
+    occasions: ["evening events", "dinners", "presentations"]
+  - item: "Cream cape coat"
+    vibe: "Drama without saying a word"
+    occasions: ["special events", "keynotes", "galas"]
+
+tops:
+  - item: "White silk blouse (tucked in)"
+    vibe: "The foundation of every power outfit"
+    occasions: ["corporate", "recordings", "meetings"]
+  - item: "Cream cashmere turtleneck"
+    vibe: "Understated luxury"
+    occasions: ["winter events", "study sessions", "casual meetings"]
+  - item: "Light grey fitted knit top"
+    vibe: "Minimal and clean"
+    occasions: ["everyday", "workshops"]
+  - item: "Navy wrap blouse"
+    vibe: "Feminine and structured"
+    occasions: ["networking", "dinners"]
+  - item: "Black sleeveless high neck top"
+    vibe: "Sharp and modern"
+    occasions: ["summer events", "under blazers"]
+  - item: "Lavender silk camisole"
+    vibe: "Soft power. Pairs beautifully under blazers"
+    occasions: ["evening events", "dinners"]
+
+bottoms:
+  - item: "High waisted wide leg trousers (cream)"
+    vibe: "Olivia Pope's go-to silhouette"
+    occasions: ["corporate", "events", "presentations"]
+  - item: "Tailored straight leg trousers (charcoal)"
+    vibe: "Versatile and sharp"
+    occasions: ["everyday corporate", "workshops"]
+  - item: "Black tailored trousers"
+    vibe: "The essential"
+    occasions: ["everything"]
+  - item: "Camel pencil skirt (knee length)"
+    vibe: "Classic femininity"
+    occasions: ["presentations", "formal events"]
+  - item: "Navy wide leg trousers"
+    vibe: "Polished but comfortable"
+    occasions: ["long event days", "workshops"]
+
+dresses:
+  - item: "White sheath dress (knee length)"
+    vibe: "The power dress. Simple. Devastating."
+    occasions: ["keynotes", "important meetings", "special events"]
+  - item: "Grey fit and flare dress"
+    vibe: "Professional with movement"
+    occasions: ["corporate events", "networking"]
+  - item: "Black wrap dress"
+    vibe: "Flattering on everyone. Always appropriate."
+    occasions: ["dinners", "evening events", "presentations"]
+  - item: "Burgundy midi dress"
+    vibe: "Colour with confidence"
+    occasions: ["galas", "special occasions"]
+
+shoes:
+  - item: "Nude pointed toe heels"
+    vibe: "Olivia's signature. Elongates everything."
+    occasions: ["corporate", "events", "presentations"]
+  - item: "Black pointed toe heels"
+    vibe: "The classic"
+    occasions: ["everything formal"]
+  - item: "White pointed toe heels"
+    vibe: "Bold and clean"
+    occasions: ["summer events", "special occasions"]
+  - item: "Nude block heels"
+    vibe: "When you need to walk and still look polished"
+    occasions: ["workshops", "long event days"]
+  - item: "Black ankle boots (low heel)"
+    vibe: "Winter power"
+    occasions: ["cold weather events", "casual corporate"]
+
+accessories:
+  - item: "Gold watch (minimal face)"
+    vibe: "Time is money and you look like it"
+    occasions: ["everyday"]
+  - item: "Pearl stud earrings"
+    vibe: "Understated elegance. Olivia approved."
+    occasions: ["corporate", "recordings", "presentations"]
+  - item: "Gold hoop earrings (medium)"
+    vibe: "A touch of personality"
+    occasions: ["networking", "casual events", "vlogs"]
+  - item: "Structured leather tote (black)"
+    vibe: "Fits your laptop, your planner, and your ambition"
+    occasions: ["everyday"]
+  - item: "Cream leather clutch"
+    vibe: "Evening elegance"
+    occasions: ["dinners", "galas"]
+  - item: "Silk scarf (neutral tones)"
+    vibe: "Tied on the bag or around the neck. Instant polish."
+    occasions: ["travel", "events"]
+  - item: "Gold pendant necklace (delicate)"
+    vibe: "Subtle but intentional"
+    occasions: ["everyday", "recordings"]
+
+signature_combinations:
+  power_meeting:
+    - "White silk blouse + charcoal tailored blazer + high waisted wide leg trousers (cream) + nude pointed toe heels + pearl stud earrings"
+  workshop_host:
+    - "Black sleeveless high neck top + black longline blazer + black tailored trousers + nude block heels + gold hoop earrings"
+  youtube_recording:
+    - "Cream cashmere turtleneck + charcoal tailored blazer + black tailored trousers + gold pendant necklace + pearl stud earrings"
+  networking_event:
+    - "Navy wrap blouse + camel trench coat + navy wide leg trousers + nude pointed toe heels + gold watch"
+  tech_event_girlie:
+    - "Lavender silk camisole + white structured wool coat + high waisted wide leg trousers (cream) + white pointed toe heels + gold hoop earrings"
+  study_session:
+    - "Cream cashmere turtleneck + camel trench coat + black tailored trousers + black ankle boots + gold watch"
+
+style_rules:
+  - "Always tuck in your top. It defines the waist and looks intentional."
+  - "One statement piece per outfit. Let it breathe."
+  - "Nails should always be done. Nude, white, or burgundy."
+  - "Hair should look intentional, whether it's a sleek bun, blowout, or natural."
+  - "Perfume is part of the outfit. Never skip it."
+  - "Iron everything. Wrinkles are not an aesthetic."
+  - "When presenting or hosting, wear a colour that contrasts with the background."
+
