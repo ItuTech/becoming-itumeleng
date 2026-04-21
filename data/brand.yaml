@@ -1,0 +1,111 @@
+# Becoming Itumeleng: Personal Brand Guidelines
+# The blueprint for showing up consistently across every platform
+
+identity:
+  name: "Itumeleng Mokgako"
+  channel_name: "Chronicles of a Curious Techie"
+  slogan: "Learning is the lifestyle."
+  greeting: "Hi techies!"
+  elevator_pitch: "BSc student. Curious techie. 13x AWS certified. Navigating tech and life one honest chapter at a time."
+
+handles:
+  youtube: "@itushares"
+  medium: "@ituwrites"
+  linkedin: "linkedin.com/in/itumeleng-mokgako-a23b5a317"
+
+credentials:
+  - "BSc student"
+  - "13x AWS certified"
+  - "AWS SheBuild Mentorship Program Manager 2026, EMEA"
+
+colour_palette:
+  primary:
+    deep_navy: "#1B2A4A"
+    soft_lavender: "#9B8FBB"
+  accent:
+    gold_amber: "#D4A843"
+  neutral:
+    white: "#FFFFFF"
+    off_white: "#F5F5F5"
+  usage:
+    - "Deep navy for backgrounds and headers"
+    - "Soft lavender for accents and highlights"
+    - "Gold amber for call to action elements and emphasis"
+    - "White and off white for text and clean space"
+
+tone_of_voice:
+  personality:
+    - "Warm and conversational"
+    - "Honest and transparent"
+    - "Encouraging but real"
+    - "Curious and enthusiastic"
+    - "Relatable, never preachy"
+  rules:
+    - "Write like you're talking to a friend, not presenting to a boardroom"
+    - "No corporate jargon unless it's tech related and relevant"
+    - "No dashes in written content. Use periods, commas, and ellipsis instead"
+    - "Emojis are okay but use sparingly. They should add warmth, not clutter"
+    - "Always be honest about the journey. The struggles are part of the story"
+    - "Never flex achievements without context. Show the work behind the win"
+
+content_pillars:
+  - pillar: "AWS certifications and exam experiences"
+    description: "Real talk about studying, exam prep, what worked, what didn't, and honest tips"
+  - pillar: "Tech banter and building in public"
+    description: "Casual, conversational tech content. Making tech feel approachable"
+  - pillar: "Event vlogs and tech community content"
+    description: "Behind the scenes at tech events, meetups, and workshops"
+  - pillar: "Navigating corporate life"
+    description: "The real side of working in tech. Growth, challenges, and lessons"
+  - pillar: "Motivational talks on consistency and growth"
+    description: "Honest conversations about showing up, self doubt, and not giving up"
+  - pillar: "Free will vlogs: life beyond the screen"
+    description: "Breakfast dates, study sessions, the human behind the techie"
+
+platform_guidelines:
+  youtube:
+    channel_name: "Chronicles of a Curious Techie"
+    handle: "@itushares"
+    content_types: ["long form videos", "YouTube Shorts", "vlogs"]
+    intro: "Hi techies!"
+    filming_rules:
+      - "Film long form in landscape (horizontal)"
+      - "Film Shorts in portrait (vertical)"
+      - "Never show identifiable company buildings or branding"
+      - "Use teleprompter app on iPad for scripts"
+      - "Back camera for best quality"
+    thumbnail_style: "Clean, bold text, your face showing expression, brand colours"
+  medium:
+    handle: "@ituwrites"
+    bio: "BSc student. Curious techie. Chronicles of a Curious Techie on YouTube. Navigating tech and life."
+    content_types: ["blog posts", "certification guides", "personal essays"]
+    writing_style: "Longer form, more reflective, storytelling approach"
+  linkedin:
+    handle: "linkedin.com/in/itumeleng-mokgako-a23b5a317"
+    content_types: ["recap posts", "milestone announcements", "community shoutouts"]
+    writing_style: "Professional but personal. Give flowers to people. Be genuine."
+
+content_rules:
+  always:
+    - "Be authentic. If it doesn't feel like you, don't post it"
+    - "Give credit and tag people who contributed to your journey"
+    - "Make content accessible to both tech and non-tech audiences"
+    - "Show the process, not just the result"
+    - "End with something encouraging or a call to connect"
+  never:
+    - "Never mention specific job title, role, or work responsibilities"
+    - "Never show identifiable company buildings or branding"
+    - "Never copy another creator's format verbatim"
+    - "Never use content that feels AI generated without making it your own"
+    - "Never post without proofreading"
+
+hashtag_strategy:
+  primary: ["#Tech", "#AWS", "#CloudComputing", "#AI", "#MachineLearning"]
+  secondary: ["#GenerativeAI", "#WomenInTech", "#LifelongLearner", "#BuildInPublic"]
+  use_sparingly: ["#DevCommunity", "#TechCommunity", "#AgenticAI"]
+  rule: "Use 8 to 10 hashtags per LinkedIn post. Keep YouTube tags in the description."
+
+visual_identity:
+  banner_style: "Minimalist with brand colours. Name, slogan, and subtle tech elements"
+  font_vibe: "Clean, modern, sans serif"
+  imagery: "Professional but approachable. Never overly corporate. Think 'polished creative'"
