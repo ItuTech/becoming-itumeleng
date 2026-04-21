@@ -1,94 +1,125 @@
-"""Personal brand consistency and messaging guidance."""
+"""Goal tracking, progress check-ins, and accountability."""
 
 import os
 import yaml
+from datetime import datetime
 from strands import tool
-
-BRAND_DEFAULTS = {
-    "name": "Itumeleng Mokgako",
-    "channel_name": "Chronicles of a Curious Techie",
-    "slogan": "Learning is the lifestyle.",
-    "greeting": "Hi techies!",
-    "handles": {
-        "youtube": "@itushares",
-        "medium": "@ituwrites",
-        "linkedin": "linkedin.com/in/itumeleng-mokgako-a23b5a317",
-    },
-    "credentials": [
-        "BSc student",
-        "13x AWS certified",
-        "AWS SheBuild Mentorship Program Manager 2026, EMEA",
-    ],
-    "tone": [
-        "Warm and conversational",
-        "Honest and transparent",
-        "Encouraging but real",
-        "Never corporate or stiff",
-        "No dashes in written content",
-    ],
-    "topics": [
-        "AWS certifications and exam experiences",
-        "Tech banter and building in public",
-        "Event vlogs and tech community content",
-        "Navigating corporate life",
-        "Motivational talks on consistency and growth",
-        "Free will vlogs: life beyond the screen",
-    ],
-    "color_palette": {
-        "navy": "#1B2A4A",
-        "lavender": "#9B8FBB",
-        "gold": "#D4A843",
-        "white": "#FFFFFF",
-    },
-}
+from exceptions import GoalNotFoundError
 
 
-def _load_brand() -> dict:
-    """Load brand guidelines, falling back to defaults if no file exists."""
-    brand_path = os.environ.get("BRAND_FILE", "data/brand.yaml")
+def _load_goals() -> dict:
+    """Load goals from file."""
+    goals_path = os.environ.get("GOALS_FILE", "data/goals.yaml")
     try:
-        with open(brand_path, "r") as f:
-            brand = yaml.safe_load(f)
-        if brand:
-            return {**BRAND_DEFAULTS, **brand}
+        with open(goals_path, "r") as f:
+            goals = yaml.safe_load(f)
+        return goals if goals else {"goals": []}
     except FileNotFoundError:
-        pass
-    return BRAND_DEFAULTS
+        return {"goals": []}
+
+
+def _save_goals(goals: dict) -> None:
+    """Persist goals back to file."""
+    goals_path = os.environ.get("GOALS_FILE", "data/goals.yaml")
+    os.makedirs(os.path.dirname(goals_path), exist_ok=True)
+    with open(goals_path, "w") as f:
+        yaml.dump(goals, f, default_flow_style=False)
 
 
 @tool
-def brand_guide(
-    platform: str,
-    content_type: str,
-    topic: str = "",
-    audience: str = "",
-) -> str:
-    """Get brand guidance for creating content on a specific platform.
-
-    Args:
-        platform: Where the content will live (e.g. "linkedin", "youtube", "medium").
-        content_type: What kind of content (e.g. "post", "bio", "video_script",
-                      "blog", "comment", "introduction").
-        topic: What the content is about.
-        audience: Who it's for (e.g. "tech professionals", "students",
-                  "mixed tech and non-tech").
+def check_goals() -> str:
+    """Review all current goals and see where things stand.
 
     Returns:
-        Brand context for the agent to generate on-brand content guidance.
+        A summary of every goal with its status and any progress notes.
     """
-    brand = _load_brand()
+    goals = _load_goals()
 
-    parts = [
-        f"Platform: {platform}",
-        f"Content type: {content_type}",
-        f"Brand guidelines:
-{yaml.dump(brand, default_flow_style=False)}",
-    ]
-    if topic:
-        parts.append(f"Topic: {topic}")
-    if audience:
-        parts.append(f"Target audience: {audience}")
+    if not goals.get("goals"):
+        return "No goals set yet. What are you working towards? Let's map it out."
+
+    lines = ["Here's where your goals stand:
+"]
+    for i, goal in enumerate(goals["goals"], 1):
+        status_icon = {
+            "in_progress": "🔄",
+            "completed": "✅",
+            "paused": "⏸️",
+        }.get(goal.get("status", "in_progress"), "❓")
+
+        lines.append(
+            f"{i}. {status_icon} {goal['name']}
+"
+            f"   What: {goal.get('description', 'No description')}
+"
+            f"   Status: {goal.get('status', 'in_progress')}
+"
+            f"   Due: {goal.get('target_date', 'No deadline set')}
+"
+            f"   Notes: {goal.get('progress_notes', [])}
+"
+        )
 
     return "
-".join(parts)
+".join(lines)
+
+
+@tool
+def update_goal(goal_name: str, status: str = "", progress_note: str = "") -> str:
+    """Update a goal's status or add a progress note.
+
+    Args:
+        goal_name: Which goal to update.
+        status: New status if changing (e.g. "in_progress", "completed", "paused").
+        progress_note: A note on what progress was made.
+
+    Returns:
+        Confirmation of the update.
+    """
+    goals = _load_goals()
+
+    for goal in goals.get("goals", []):
+        if goal["name"].lower() == goal_name.lower():
+            if status:
+                goal["status"] = status
+            if progress_note:
+                if "progress_notes" not in goal:
+                    goal["progress_notes"] = []
+                goal["progress_notes"].append(
+                    f"[{datetime.now().strftime('%Y-%m-%d')}] {progress_note}"
+                )
+            _save_goals(goals)
+            return f"Updated: {goal['name']}. Status: {goal.get('status')}. Keep going! 💪"
+
+    raise GoalNotFoundError(f"Could not find a goal called '{goal_name}'. Double check the name.")
+
+
+@tool
+def add_goal(name: str, description: str, target_date: str = "") -> str:
+    """Set a new goal to track.
+
+    Args:
+        name: What to call this goal.
+        description: What you want to achieve.
+        target_date: When you want to achieve it by (YYYY-MM-DD).
+
+    Returns:
+        Confirmation that the goal has been added.
+    """
+    goals = _load_goals()
+
+    new_goal = {
+        "name": name,
+        "description": description,
+        "status": "in_progress",
+        "progress_notes": [],
+        "created_at": datetime.now().isoformat(),
+    }
+    if target_date:
+        new_goal["target_date"] = target_date
+
+    goals.setdefault("goals", []).append(new_goal)
+    _save_goals(goals)
+
+    return f"Goal added: {name}. Let's make it happen! 🚀"
 
