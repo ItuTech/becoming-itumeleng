@@ -3,7 +3,7 @@
 **Author:** Itumeleng Mokgako  
 **Date:** June 2026  
 **Status:** Work in Progress — I am actively refining and documenting this as I go  
-**This document was inspired by a challenge from:** Craig (Senior Solutions Architect, AWS)
+**This document was inspired by a challenge from:** Craig M. (Solutions Architect, AWS)
 
 ---
 
